@@ -1,9 +1,8 @@
-import { ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { User } from "./User.entity";
-import { Admin } from "./Admin.entity";
 import { Project } from "./Project.entity";
 
-
+@Entity()
 export class Participer{
    
     @PrimaryGeneratedColumn()

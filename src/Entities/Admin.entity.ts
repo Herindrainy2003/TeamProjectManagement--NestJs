@@ -1,7 +1,7 @@
-import { Column, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Project } from "./Project.entity";
 
-
+@Entity()
 export class Admin{
     
     @PrimaryGeneratedColumn()
