@@ -1,7 +1,7 @@
 import { IsString } from "class-validator";
 
 
-export class Participer {
+export class ParticiperDto {
     @IsString()
     userId : number;
 

@@ -9,8 +9,9 @@ import { ProjectModule } from './project/project.module';
 import { ParticiperModule } from './participer/participer.module';
 
 
+
 @Module({
-  imports : [TypeOrmModule.forRoot(dbConfig), UserModule, AdminModule],
+  imports : [TypeOrmModule.forRoot(dbConfig), UserModule, AdminModule ,ParticiperModule],
   controllers: [AppController],
   providers: [AppService],
 })

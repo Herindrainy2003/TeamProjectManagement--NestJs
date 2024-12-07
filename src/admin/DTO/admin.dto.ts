@@ -1,6 +1,6 @@
 import { IsEmail, IsString } from "class-validator";
 
-export class Admin {
+export class AdminDto {
     @IsString()
     nom : string;
 

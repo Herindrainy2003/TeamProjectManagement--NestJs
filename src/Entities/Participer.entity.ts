@@ -8,9 +8,9 @@ export class Participer{
     @PrimaryGeneratedColumn()
     id : number;
 
-    @ManyToOne(()=> User , (user)=> user.participer)
+    @ManyToOne(()=> User , (user)=> user.participer ,{eager :true})
     user : User
 
-    @ManyToOne(()=> Project , (project)=> project.participer)
+    @ManyToOne(()=> Project , (project)=> project.participer , {eager : true})
     project : Project;
 }
