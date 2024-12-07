@@ -1,6 +1,6 @@
 import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Participer } from "./Participer.entity";
-import { Admin } from "./Admin.enity";
+import { Admin } from "./Admin.entity";
 
 
 @Entity()
