@@ -5,6 +5,7 @@ import { Admin } from "./Admin.entity";
 
 @Entity()
 export class Project {
+    
     @PrimaryGeneratedColumn()
     id : number ;
 

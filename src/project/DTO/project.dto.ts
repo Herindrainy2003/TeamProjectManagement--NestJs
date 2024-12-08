@@ -1,6 +1,6 @@
 import { IsInt, IsString } from "class-validator";
 
-export class Project {
+export class ProjectDto {
     @IsString()
     titre : string;
 

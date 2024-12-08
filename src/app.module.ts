@@ -11,7 +11,7 @@ import { ParticiperModule } from './participer/participer.module';
 
 
 @Module({
-  imports : [TypeOrmModule.forRoot(dbConfig), UserModule, AdminModule ,ParticiperModule],
+  imports : [TypeOrmModule.forRoot(dbConfig), UserModule, AdminModule ,ParticiperModule ,ProjectModule],
   controllers: [AppController],
   providers: [AppService],
 })
