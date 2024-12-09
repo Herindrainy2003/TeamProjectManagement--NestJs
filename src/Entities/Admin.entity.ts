@@ -1,6 +1,6 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Project } from "./Project.entity";
-
+import * as bcrypt from "bcrypt";
 @Entity()
 export class Admin{
     
@@ -18,4 +18,9 @@ export class Admin{
 
     @OneToMany(()=>Project , (project)=>project.admin)
     project : Project[];
+
+    @BeforeInsert()
+    async hashPassword(){
+        this.motdepasse = await bcrypt.hash(this.motdepasse , 10);
+    }
 }

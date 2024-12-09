@@ -15,8 +15,10 @@ export class AdminService {
     }
     
     async createAdmin(
-        admin : AdminDto
+        adminDto : AdminDto
     ){
+
+        const admin = this.adminRepository.create(adminDto);
         return await this.adminRepository.save(admin)
     }
 

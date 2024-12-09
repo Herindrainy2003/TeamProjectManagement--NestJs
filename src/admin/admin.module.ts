@@ -5,6 +5,7 @@ import { Admin } from 'src/Entities/Admin.entity';
 import { AdminService } from './admin.service';
 import { APP_PIPE } from '@nestjs/core';
 
+
 @Module({
     imports : [ TypeOrmModule.forFeature([Admin])],
   controllers: [AdminController],

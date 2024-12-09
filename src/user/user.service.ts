@@ -13,9 +13,10 @@ export class UserService {
     }
 
     async createUser(
-        user : UserDto
+        userDto : UserDto
     ){
-        return await this.userRepository.save(user)
+        const users = this.userRepository.create(userDto)
+        return this.userRepository.save(users);
     }
 
     async deleteUser(id :number){
