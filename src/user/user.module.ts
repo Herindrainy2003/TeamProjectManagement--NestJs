@@ -4,18 +4,28 @@ import { UserController } from './user.controller';
 import { User } from 'src/Entities/User.entity';
 import { UserService } from './user.service';
 import { APP_PIPE } from '@nestjs/core';
+import { AuthService } from 'src/auth/auth.service';
 
 
 @Module({
-    imports : [TypeOrmModule.forFeature([User])] ,
+  imports : [TypeOrmModule.forFeature([User])] ,
   controllers: [UserController],
-  providers: [{
+  providers: [
+    {
     provide : APP_PIPE ,
     useValue : new ValidationPipe({
       whitelist :true ,
-      forbidNonWhitelisted : true
+      forbidNonWhitelisted : true,
+      transform : false ,
+          transformOptions : {
+            enableImplicitConversion : true
+          } 
     })
-  },UserService]
+  },
+  UserService,
+  AuthService
+
+]
 })
 export class UserModule {
 }

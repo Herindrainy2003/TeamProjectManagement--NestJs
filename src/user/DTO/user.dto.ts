@@ -5,6 +5,7 @@ export class UserDto {
     nom : string;
 
     @IsEmail({} , {message: "veuillez verifier votre email S'il vous plait"})
+    @IsString()
     email : string;
 
     @IsString()

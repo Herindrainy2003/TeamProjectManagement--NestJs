@@ -12,7 +12,7 @@ export class User  {
     @Column()
     email : string;
 
-    @Column()
+    @Column({unique : true})
     motdepasse : string;
 
     @OneToMany(()=>Participer , (participer)=> participer.user)

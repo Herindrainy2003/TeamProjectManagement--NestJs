@@ -6,12 +6,13 @@ import { PostgresConnectionOptions } from "typeorm/driver/postgres/PostgresConne
 
 
 export const dbConfig : PostgresConnectionOptions = {
-    host: 'localhost',
+    host: process.env.DB_HOST,
     port : 5432,
-    username : 'postgres',
+    username : "postgres",
     password : 'root',
     database : 'teamTaskManager',
     type : 'postgres',
     entities : [Admin ,User ,Participer ,Project],
     synchronize : true,
 };
+
